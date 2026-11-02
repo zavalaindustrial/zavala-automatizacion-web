@@ -124,6 +124,35 @@
 }
 .custom-part-text h4 { font-size: 1.05rem; color: #fff; margin-bottom: 4px; }
 .custom-part-text p { font-size: 0.9rem; color: #cbd5e1; }
+.custom-part-card.is-in-stock {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(2, 132, 199, 0.15) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+}
+.custom-part-card.is-custom {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(2, 132, 199, 0.12) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+.search-suggestion-chip {
+  display: inline-block;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-dark);
+  color: #cbd5e1;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 3px 6px 3px 0;
+  transition: all 0.2s ease;
+}
+.search-suggestion-chip:hover {
+  background: rgba(2, 132, 199, 0.25);
+  border-color: var(--primary);
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
 .hero-cta-group {
   display: flex;
   align-items: center;

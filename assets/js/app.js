@@ -55,34 +55,129 @@ document.addEventListener("DOMContentLoaded", () => {
       renderCatalog();
     });
 
-  // 2. Buscador en Tiempo Real del Hero (Función Estrella)
+  // 2. Buscador en Tiempo Real del Hero (Detección Inmediata de Stock y Sugerencias)
   function handleHeroSearch() {
-    const query = (heroSearchInput.value || "").trim();
+    const query = (heroSearchInput ? heroSearchInput.value : "").trim();
     if (!query) {
-      if (customPartCard) customPartCard.style.display = "none";
+      if (customPartCard) {
+        customPartCard.style.display = "none";
+        customPartCard.innerHTML = "";
+      }
       filteredProducts = [...allProducts];
       currentPage = 1;
       renderCatalog();
       return;
     }
 
-    // Mostrar tarjeta dinámica para CUALQUIER número de parte
-    if (customPartCard && customPartQuery && customPartWaBtn) {
-      customPartCard.style.display = "block";
-      customPartQuery.textContent = query.toUpperCase();
-      
+    if (!customPartCard) return;
+
+    const qLower = query.toLowerCase();
+
+    // 1. Buscar coincidencias en el inventario/catálogo
+    const matches = allProducts.filter(p => {
+      const pn = (p.part_number || p.code || "").toLowerCase();
+      const desc = (p.description || "").toLowerCase();
+      const br = (p.brand || "").toLowerCase();
+      return pn.includes(qLower) || desc.includes(qLower) || br.includes(qLower);
+    });
+
+    // Ordenar coincidencias: prioridad a coincidencia exacta o inicio en part_number
+    matches.sort((a, b) => {
+      const aPn = (a.part_number || a.code || "").toLowerCase();
+      const bPn = (b.part_number || b.code || "").toLowerCase();
+      if (aPn === qLower) return -1;
+      if (bPn === qLower) return 1;
+      if (aPn.startsWith(qLower) && !bPn.startsWith(qLower)) return -1;
+      if (!aPn.startsWith(qLower) && bPn.startsWith(qLower)) return 1;
+      return 0;
+    });
+
+    customPartCard.style.display = "block";
+
+    if (matches.length > 0) {
+      // CASO 1: SÍ HAY COINCIDENCIA EN EL CATÁLOGO (Stock Local / Catálogo)
+      const matchedItem = matches[0];
+      customPartCard.className = "custom-part-card is-in-stock";
+
+      const urgentMsg = `Hola Zavala Automatización, me interesa cotizar para entrega inmediata el No. de Parte en stock: ${matchedItem.part_number} (${matchedItem.description}). ¿Tienen disponibilidad y tiempo de entrega?`;
+      const waUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
+
+      let suggestionsHtml = "";
+      if (matches.length > 1) {
+        const others = matches.slice(1, 5);
+        suggestionsHtml = `
+          <div class="hero-matches-suggestions" style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            <span style="color: #94a3b8; margin-right: 6px;">Otras coincidencias en almacén:</span>
+            ${others.map(item => `
+              <button type="button" class="search-suggestion-chip" data-part="${item.part_number}">
+                ${item.part_number}
+              </button>
+            `).join("")}
+          </div>
+        `;
+      }
+
+      customPartCard.innerHTML = `
+        <div class="custom-part-card-content">
+          <div class="custom-part-text">
+            <div style="margin-bottom: 6px;">
+              <span class="badge-stock">✓ EN INVENTARIO LOCAL / CATÁLOGO</span>
+            </div>
+            <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 4px;">
+              No. de Parte: <strong class="part-number-code" style="color: #38bdf8;">${matchedItem.part_number}</strong> (${matchedItem.brand || 'Industrial'})
+            </h4>
+            <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 4px;">${matchedItem.description}</p>
+            <p style="color: #4ade80; font-size: 0.9rem; margin-top: 4px; font-weight: 500;">
+              ✓ Pieza registrada en almacén. Suministro local y entrega inmediata disponible.
+            </p>
+          </div>
+          <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
+            <span>💬</span> Cotizar Entrega Inmediata (Pieza en Stock)
+          </a>
+        </div>
+        ${suggestionsHtml}
+      `;
+
+      // Event listeners para chips de sugerencias
+      customPartCard.querySelectorAll(".search-suggestion-chip").forEach(chip => {
+        chip.addEventListener("click", (e) => {
+          e.preventDefault();
+          const pCode = chip.getAttribute("data-part");
+          if (pCode && heroSearchInput) {
+            heroSearchInput.value = pCode;
+            handleHeroSearch();
+          }
+        });
+      });
+
+    } else {
+      // CASO 2: NO HAY COINCIDENCIA (Importación y Suministro Directo)
+      customPartCard.className = "custom-part-card is-custom";
+
       const urgentMsg = `Hola Zavala Automatización, me urge cotizar el No. de Parte: ${query.toUpperCase()}. ¿Lo tienen en almacén o tiempo de entrega por importación exprés?`;
-      customPartWaBtn.href = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
+      const waUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
+
+      customPartCard.innerHTML = `
+        <div class="custom-part-card-content">
+          <div class="custom-part-text">
+            <div style="margin-bottom: 6px;">
+              <span class="badge-cat" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">⚡ IMPORTACIÓN Y SUMINISTRO DIRECTO</span>
+            </div>
+            <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 4px;">
+              ¿Buscas el No. de Parte <span class="part-number-code" style="color: #fbbf24;">${query.toUpperCase()}</span>?
+            </h4>
+            <p style="color: #cbd5e1; font-size: 0.95rem;">
+              No está en mostrador local, pero lo localizamos y suministramos por importación express en tiempo récord.
+            </p>
+          </div>
+          <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
+            <span>💬</span> Cotizar este No. de Parte por WhatsApp
+          </a>
+        </div>
+      `;
     }
 
-    // Filtrar catálogo general
-    const qLower = query.toLowerCase();
-    filteredProducts = allProducts.filter(p => 
-      (p.part_number && p.part_number.toLowerCase().includes(qLower)) ||
-      (p.description && p.description.toLowerCase().includes(qLower)) ||
-      (p.brand && p.brand.toLowerCase().includes(qLower))
-    );
-
+    filteredProducts = matches;
     currentPage = 1;
     renderCatalog();
   }
@@ -92,8 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     heroSearchInput.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
-        const catalogEl = document.getElementById("catalogo");
-        if (catalogEl) catalogEl.scrollIntoView({ behavior: "smooth" });
+        handleHeroSearch();
       }
     });
   }
@@ -101,8 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnHeroSearch) {
     btnHeroSearch.addEventListener("click", () => {
       handleHeroSearch();
-      const catalogEl = document.getElementById("catalogo");
-      if (catalogEl) catalogEl.scrollIntoView({ behavior: "smooth" });
     });
   }
 
@@ -113,8 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (heroSearchInput) {
         heroSearchInput.value = val;
         handleHeroSearch();
-        const catalogEl = document.getElementById("catalogo");
-        if (catalogEl) catalogEl.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
