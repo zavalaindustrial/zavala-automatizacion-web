@@ -1,0 +1,191 @@
+# Zavala Automatización y Control S.A. de C.V.
+> Suministro urgente de equipo y refacciones de automatización industrial, control eléctrico y neumática en México.
+
+## Información de la Empresa
+- Razón Social: Zavala Automatización y Control S.A. de C.V.
+- RFC: ZAC200629JK2
+- Dirección: Hacienda San Ignacio 103, C.P. 66477, San Nicolás de los Garza / Monterrey, N.L., México
+- Teléfono Oficina: 81 2471 7534
+- WhatsApp de Ventas y Paros de Planta: 81 3250 7130 (+52 81 3250 7130)
+- Correo Electrónico: ventas1@zavalaindustrial.net
+- Cobertura: Envíos express a los 32 estados de México por DHL, FedEx y paquetería dedicada.
+- Condiciones Comerciales: Facturación CFDI 4.0 y crédito directo a plantas industriales y maquiladoras.
+
+## Especialidad y Diferenciadores
+- Atención prioritaria 24/7 a paros de planta industriales.
+- Localización de refacciones obsoletas, difíciles de conseguir o descontinuadas de fabricantes líderes.
+- Más de 149 números de parte en inventario activo local y red de importación exprés de Estados Unidos, Europa y Japón.
+
+## Marcas y Familias Principales
+- **Siemens**: Contactores SIRIUS (3RT20, 3RT10), relevadores de sobrecarga (3RU21, 3RU2146-4KB0), guardamotores (3RV20), PLCs SIMATIC S7-1200 (6ES7211, 6ES7212, 6ES7214, 6ES7215), S7-1500, S7-300, variadores SINAMICS (V20, G120, 6SL) y LOGO! 24RCE.
+- **Allen-Bradley / Rockwell Automation**: Fuentes SLC 500 (1746-P2, 1746-P1), módulos ControlLogix 1756, CompactLogix 1769, POINT I/O 1734, variadores PowerFlex 525 (25B), PowerFlex 40 (22B), y pantallas táctiles PanelView Plus 7.
+- **Keyence**: Amplificadores de fibra óptica serie FS-N (FS-N41N), sensores láser CMOS LR-Z (LR-ZB250CB), cámaras de visión artificial IV2/IV3, lectores de códigos de barras SR-1000/SR-2000, y cortinas ópticas de seguridad GL-R.
+- **Fanuc**: Servomotores de corriente alterna Alpha i A06B, consolas Teach Pendant A05B, fuentes de alimentación A16B, tarjetas I/O A03B y refacciones para controladores R-30iA y R-30iB.
+- **Mitsubishi Electric**: PLCs MELSEC serie FX3U, FX5U, serie Q, variadores de frecuencia Inverter FR-D700 / FR-E700, y pantallas industriales GOT2000.
+- **Control y Sensores Multimarca**: Válvulas y cilindros SMC, relevadores Finder 55.34, relevadores de estado sólido Celduc SOB945, sensores inductivos Autonics PRW12, sensores fotoeléctricos Banner Q85, interruptores ABB OT100F3 y gabinetes NEMA.
+
+## Enlaces Principales del Sitio Web
+- [Portal Principal](https://zavalaautomatizacionycontrol.com.mx/)
+- [Catálogo Estático Completo](https://zavalaautomatizacionycontrol.com.mx/catalogo-completo.html)
+- [Siemens Automatización](https://zavalaautomatizacionycontrol.com.mx/marcas/siemens.html)
+- [Allen-Bradley Refacciones](https://zavalaautomatizacionycontrol.com.mx/marcas/allen-bradley.html)
+- [Keyence Sensores & Visión](https://zavalaautomatizacionycontrol.com.mx/marcas/keyence.html)
+- [Fanuc Robótica & CNC](https://zavalaautomatizacionycontrol.com.mx/marcas/fanuc.html)
+- [Mitsubishi Electric](https://zavalaautomatizacionycontrol.com.mx/marcas/mitsubishi.html)
+- [Control, Neumática & Sensores](https://zavalaautomatizacionycontrol.com.mx/marcas/control-y-sensores.html)
+
+## Catálogo Completo de Productos Sincronizados
+| No. de Parte | Descripción del Producto | Marca / Fabricante | Categoría Técnica | Disponibilidad |
+|---|---|---|---|---|
+| `0077935` | LLAVE STILLSON HIERRO MALEABLE 12" IND. | Herramientas Industriales | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `100851` | CARDA COPA 3 ALAMBRE | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `100854` | CARDA COPA 3 ALAMBRE | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `1023225` | LLAVE STILLSON HIERRO MALEABLE 8" PESADO | Herramientas Industriales | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `10648` | PISTOLA PLASTICA PARA SOPLETEAR | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `110008XN` | CABLE COLOR NEGRO LS8 | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `110010XV` | CABLE COLOR VERDE LS10 | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `111502` | EXTENSION 1/2 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `145269` | BROCA AV MM | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `16013-G` | FUSIBLE CERAMICO 10X38 CLASE GG-GL 500V 2 AMP | Distribución Eléctrica | Maniobra y Protección Eléctrica | Suministro Inmediato / Cotización Express |
+| `1746-P2` | FUENTE DE ALIMENTACION 120/240 5A | Allen-Bradley | PLCs y Controladores | Suministro Inmediato / Cotización Express |
+| `18-030-120` | MACHUELO M12.0 X 1.00 RECTO A.A.V | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `18129` | BLISTER CON 5 BAGETAS | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `19033` | PINTURA EN AEROSOL NEGRO | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `207GIUR` | PINZA ELECTRICISTA CORTE DIAG 7 3/4 | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `2156065` | BARRETA DE UNA DE 3/4" X 60 CM BU60 SURTEK | Herramientas Industriales | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `220GUR` | PINZA PUNTA PLANA CRONICA 6-5/8 | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `22148` | Suministro y reemplazo de refacción industrial 22148 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `232512` | CERRADURA P/MUEBLE  TUBULAR CROMO BTE. | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `24VCD` | VENTILADOR 60X60X25 | Control & Automatización | Fuentes de Alimentación | Suministro Inmediato / Cotización Express |
+| `24VCD` | VENTILADOR 60X60X25 | Control & Automatización | Fuentes de Alimentación | Suministro Inmediato / Cotización Express |
+| `3426970` | PUNTAS PHILLIPS 2 MILWAUKEE | Herramientas Industriales | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `41038` | BOLSAC/24ESCUADRAS PLA | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `43428` | CANDADO DE LANTON 40 MM GANCHO CORTO EN BLISTER, HERMEX | Herramientas Industriales | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `48-22-8425` | CAJA DE HERRAMIENTA MILWAUKEE | Herramientas Industriales | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `4996UR` | JUEGO 9 LLAVES HEX "L" METRICOS BOLA RACK | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `518.146.156ZA` | MANIFOLD DE BOMBA SANPIPER 518.146.156 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `55.34.9.024.0040` | FINDER RELEVADOR ENCAPSULADO | Finder | Relevación y Seguridad | Suministro Inmediato / Cotización Express |
+| `5938` | BROCA PARA ACERO 19/32 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `5X5.5X.25` | SELLO PARA VASTAGO DE 5" | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `6505215` | LLAVE STILLSON HIERRO MALEABLE 6" 31000
+RIDGID | Herramientas Industriales | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `6776325` | ROTOMARTILLO DE IMPACTO 1/2" A BATERIA L
+RI820 | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `700-193ZA` | Conector Usb Tipo B Hembra De 90° 4 Pines 5 PIEZAS | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `7020002` | PIJA EX PUNTA BRONCA 1/4 X1 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `7020045` | HUASA Y EMPAQUE P/PIJA YA UNIDOS | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `708SUR` | LLAVE AJUSTABLE 8 BLACK | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `78-007-605` | KIT DE PISTOLA DE AIRE | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `808HDUR` | LLAVE STILSON HIERRO MALEABLE 8 PESADO | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `812URUR` | LLAVE STILSON HIERRO MALEABLE 12 | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `8168915` | PRENSA HIDRAULICA 20 TON MIKELS PH-20 | Herramientas Industriales | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9510150` | MONITOR 1 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9510600` | CONTRATUERCA 1 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9580600` | COPLE PARED GRUESA 1 MG | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9687UR` | DESTORNILLADOR RED PHILLI 1/4 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9816UR` | DESTORNILLADOR AMBAR CARA PLANA 1/4 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `9870510` | TUERCA HEXAGONAL 3/8 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `AC20-N02G-Z-D` | FRL ROSCA 1/4 PURGA MANUAL | SMC | Neumática y Válvulas | Suministro Inmediato / Cotización Express |
+| `AMB12-A` | BASE PARA REVELADOR | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `APGM-5` | ARANDELA PLANA GALVANIZADA DE 6 MM | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `AT-3/4` | ARANDELA TEMPLADA 3/4 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `AT-3/8` | ARANDELA TEMPLADA 3/6 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `AT30` | FUSIBLE 30 AMP | Distribución Eléctrica | Maniobra y Protección Eléctrica | Suministro Inmediato / Cotización Express |
+| `AT30` | Suministro y reemplazo de refacción industrial AT30 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `B3524` | FOCO DE FILAMENTO | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `BS2 2213 2RS/VT143` | RIRSA bs13 rod rodillos a rotula sellado | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `BS2-2218-2RS/VT143` | RODAMIENTO DE RODILLOS DOBLE 2218 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `BS2-2218-2RS/VT143` | RODAMIENTO DE RODILLOS DOBLES 2218 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `BZE6-2RN` | MICROSWITCH MCA CNTD | Honeywell | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CA30CAN25NA` | SENSOR CAP MCA | Carlo Gavazzi | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `CD12L-0B-020-C0` | AUTOMATIONDIRECT CONNECTION
+CABLE, M12 R | AutomationDirect | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CIN-4025N` | CINCHO DE 10 NEGROS | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-1/2` | CUÑA CUADRADA 1/2 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-1/4` | CUÑA CUADRADA 1/4 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-1/8` | CUÑA CUADRADA 1/8 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-1/8` | Suministro y reemplazo de refacción industrial CM-1/8 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-3/16` | CUÑA CUADRADA 3/16 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-3/8` | CUÑA CUADRADA 3/8 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-5/16` | CUÑA CUADRADA 5/16 x 1M | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-5/8` | CUÑA CUADRADA 5/8 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CM-7/16` | CUÑA CUADRADA 7/16 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `CST4X8CORTE` | CABLE USO RUDO 4X8AWG 600V | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `DD3LLM141` | LLAVE PARA SENSOR | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `ELR-H3-I-SC-24VDC/500AC-2` | CONTROL DE ARRANQUE HIBRIDO | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `GRANDULA M20` | CONECTOR DE GRANDULA | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `H6B-TE-2M-M20` | TAPA H6B | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `HAMBURGESA 3` | DOBLE CARNE UFF | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `HE-006-F` | INSERTO HEMBRA MOD | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `HE-006M` | INSERTO MACHO MOD | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `HP-3/4` | ARANDELA DE PRESION 3/4 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `ICB12SN04NPO` | SENSOR MCA | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `KL2167` | ADAPTADOR MAGNETICO 10MM 3/8X2 2/1 | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `KQ2H12` | RECTO DE 12 MM | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `L5S-3/4` | TUERCA G-5 STD 3/4 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LAM-825` | REFLECTOR LED DE 20W RGB | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LB-33` | CAJA REGISTRO 1 PIG SERIE 3 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LINEA18` | CABLE CALIBRE  18AWG | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LM-4X0.70` | TUERCA HEX 4 M.M PASO 0.70 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LM-6X 1.00` | TUERCA HEX 5MM PASO 1.00 STD | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `LS-3/8` | TUERCA ESTANDAR 3/8 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MAQUINADO2` | FABRICACION DE VASTAGO DOBLE  DE 1" | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MAQUINADOS` | SACAR TORNILLOS CAPADOS Y TORNILLERIA 12PZAS | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MAQUINADOS1` | SPROCKET ABRIR A 25MM CUÑERO DE 1/4 Y ROSCA DE 10-24 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MC-1306` | MICROSWITCH MCA CNTD | Honeywell | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MC-31B-NC/NO-10` | SENSOR MAGNETICO TIPO PUERTA 10 PIEZAS | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `MD4020M24D` | 40X40X28 24V | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MET-AMARI-27` | TUBO C/COPLE P.G.1 27 MM OMEGA AMARILLA | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `MOD-V1-G-10M-PVC` | CABLE PARA SENSOR MCA | Distribución Eléctrica | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `OHBS2AJ1` | MANIJA TIPO SELECCIONADOR | ABB | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `OPAM3X6` | OPRESOR ALLEN MILIMETRICO 3X6 | Allen-Bradley | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `OT100F3` | Suministro y reemplazo de refacción industrial OT100F3 | ABB | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `OT100F3` | INTERRUPTOR DESCONECTOR DE 3 POLOS | ABB | Maniobra y Protección Eléctrica | Suministro Inmediato / Cotización Express |
+| `OXS6X330` | VARILLA 6x330MM | ABB | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `PC08-01` | CONECTOR RECTO DE 8 MM A ROSCA 1/8 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `PC10-03` | CONECTOR RECTO DE 10 MM A ROSCA 3/8 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `PC12-02` | CONECTOR RECTO DE 12 MM A ROSCA 1/4 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `PISCA-A` | PISTOLA DE CALOR 2000 W | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `PRW12-4DP` | SENSOR DE PROXIMIDAD 12MM | Autonics | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `PSEA-RUB-02` | REGLETA DE SEGURIDAD MCA | Control & Automatización | Relevación y Seguridad | Suministro Inmediato / Cotización Express |
+| `PSS-PM3DNBR` | FOTOCELDA | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `PU1065BUS` | MANGUERA POLIURETANO 10 MM AZUL SOLIDO | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `Q85VR3DL` | SENSOR FOTOELECTRICO RANGO 1M 12-240VDC | Banner Engineering | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `R1820` | ROTOMARTILLO DE IMPACTO 1/2 | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `RC-33-NC/NO-10` | PAQUETE DE 10 SENSORES MAGNETICOS | Control & Automatización | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `REGULADORES DE FLUJO DE 3/8 A 8MM` | REGULADOR DE FLUJO DE 3/8 A 8 MM  CODO | Control & Automatización | Neumática y Válvulas | Suministro Inmediato / Cotización Express |
+| `RL2` | INTERRUPTOR DE 2 POLOS 1 TIRO | Control & Automatización | Maniobra y Protección Eléctrica | Suministro Inmediato / Cotización Express |
+| `SC1/4-01` | REGULADOR EN CODO 1/4 X 1/8 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `SMC SY3A0R-5U1-NA` | VALVULA SELENOIDE 4/5 | SMC | Neumática y Válvulas | Suministro Inmediato / Cotización Express |
+| `SMP5500000400 -` | Eliwell - Control programable | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `SOB945360` | RELEVADOR ESTADO SOLIDO SOB945360 | Celduc | Relevación y Seguridad | Suministro Inmediato / Cotización Express |
+| `SOB945660` | RELE DE ESTADO SOLIDO SOB945660 | Celduc | Relevación y Seguridad | Suministro Inmediato / Cotización Express |
+| `ST-118-AF` | BLISTER CON 5 SEGUETAS 18 DPP | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `ST18C7W` | MICRO DETECTORS MOUNTING BRACKET, RIGHT | Micro Detectors | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `T076` | TUERCA PARA CORTADOR PARA ACETILENO | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `T29-RW` | RAWLET CONDULET CON TAPA DE 3X4 | Distribución Eléctrica | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `T5S-3/4X6` | TORNILLO GRADO 5 ESTANDAR DE 3/4X6 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TH38S` | TUERCA DE SEGURIDAD 3/8 | Fijación y Tornillería Industrial | Relevación y Seguridad | Suministro Inmediato / Cotización Express |
+| `THEB-KIT` | CAJA DE THERMOFIT DE COLORES | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TS-1/2X2` | TORNILLO SOCKET ESTANDAR | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TS-1/2X2` | CUÑA CUADRADA 1/8 x 1M - | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TS-1/2X2` | TORNILLO SOCKET ESTANDAR 1/2X2 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TS-3/8X61/2` | TORNILLO SOCKET ESTANDAR 3/8X6 1/2 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSI-1/4X2` | TORNILLO SOCKET INOXIDABLE | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSI-1/4X2` | TORNILLO SOCKET INOXIDABLE 1/4X2 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-12X30` | TORNILLO HEXAGONAL MIIMETRICO STD 12X30 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-4X50` | TORNILLO SOCKET MILIMETRICO 4X50 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-6X30` | TORNILLO SOCKET MILIMETRICO 6X30 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X30` | TORNILLO SOCKET INOXIDABLE 1/4X2 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X30` | TORNILLO SOCKET MILIMETRICO 8X30 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X40` | TORNILLO SOCKET MILIMETRICO 8X40 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X40` | TORNILLO SOCKET MILIMETRICO 8X40 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X50` | TORNILLO SOCKET MILIMETRICO 8X50 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X50` | TORNILLO SOCKET MILIMETRICO 8X50 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `TSM-8X50` | TORNILLO SOCKET MILIMETRICO 8X50 | Fijación y Tornillería Industrial | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `UK6A-D2-0A` | MICRO DETECTORS ULTRASONIC PROXIMITY SEN | Micro Detectors | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `UR 808HD` | LLAVE STILSON HIERRO MALEABLE  8 PESADO | Control & Automatización | Herramientas de Mantenimiento | Suministro Inmediato / Cotización Express |
+| `V1-G10M-PVC` | CABLE PARA SENSOR MCA | Distribución Eléctrica | Sensores e Instrumentación | Suministro Inmediato / Cotización Express |
+| `VT2012` | VENTILADOR 42" TIPO TAMBOR | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |
+| `cxsm25-100` | CILINDRO 25X100 | SMC | Neumática y Válvulas | Suministro Inmediato / Cotización Express |
+| `h06-02a` | recto de 6 mm a rosca 1/4 | Control & Automatización | Componentes y Mantenimiento Industrial | Suministro Inmediato / Cotización Express |

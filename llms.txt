@@ -1,0 +1,35 @@
+# Zavala Automatización y Control S.A. de C.V.
+> Suministro urgente de equipo y refacciones de automatización industrial, control eléctrico y neumática en México.
+
+## Información de la Empresa
+- Razón Social: Zavala Automatización y Control S.A. de C.V.
+- RFC: ZAC200629JK2
+- Dirección: Hacienda San Ignacio 103, C.P. 66477, San Nicolás de los Garza / Monterrey, N.L., México
+- Teléfono Oficina: 81 2471 7534
+- WhatsApp de Ventas y Paros de Planta: 81 3250 7130 (+52 81 3250 7130)
+- Correo Electrónico: ventas1@zavalaindustrial.net
+- Cobertura: Envíos express a los 32 estados de México por DHL, FedEx y paquetería dedicada.
+- Condiciones Comerciales: Facturación CFDI 4.0 y crédito directo a plantas industriales y maquiladoras.
+
+## Especialidad y Diferenciadores
+- Atención prioritaria 24/7 a paros de planta industriales.
+- Localización de refacciones obsoletas, difíciles de conseguir o descontinuadas de fabricantes líderes.
+- Más de 149 números de parte en inventario activo local y red de importación exprés de Estados Unidos, Europa y Japón.
+
+## Marcas y Familias Principales
+- **Siemens**: Contactores SIRIUS (3RT20, 3RT10), relevadores de sobrecarga (3RU21, 3RU2146-4KB0), guardamotores (3RV20), PLCs SIMATIC S7-1200 (6ES7211, 6ES7212, 6ES7214, 6ES7215), S7-1500, S7-300, variadores SINAMICS (V20, G120, 6SL) y LOGO! 24RCE.
+- **Allen-Bradley / Rockwell Automation**: Fuentes SLC 500 (1746-P2, 1746-P1), módulos ControlLogix 1756, CompactLogix 1769, POINT I/O 1734, variadores PowerFlex 525 (25B), PowerFlex 40 (22B), y pantallas táctiles PanelView Plus 7.
+- **Keyence**: Amplificadores de fibra óptica serie FS-N (FS-N41N), sensores láser CMOS LR-Z (LR-ZB250CB), cámaras de visión artificial IV2/IV3, lectores de códigos de barras SR-1000/SR-2000, y cortinas ópticas de seguridad GL-R.
+- **Fanuc**: Servomotores de corriente alterna Alpha i A06B, consolas Teach Pendant A05B, fuentes de alimentación A16B, tarjetas I/O A03B y refacciones para controladores R-30iA y R-30iB.
+- **Mitsubishi Electric**: PLCs MELSEC serie FX3U, FX5U, serie Q, variadores de frecuencia Inverter FR-D700 / FR-E700, y pantallas industriales GOT2000.
+- **Control y Sensores Multimarca**: Válvulas y cilindros SMC, relevadores Finder 55.34, relevadores de estado sólido Celduc SOB945, sensores inductivos Autonics PRW12, sensores fotoeléctricos Banner Q85, interruptores ABB OT100F3 y gabinetes NEMA.
+
+## Enlaces Principales del Sitio Web
+- [Portal Principal](https://zavalaautomatizacionycontrol.com.mx/)
+- [Catálogo Estático Completo](https://zavalaautomatizacionycontrol.com.mx/catalogo-completo.html)
+- [Siemens Automatización](https://zavalaautomatizacionycontrol.com.mx/marcas/siemens.html)
+- [Allen-Bradley Refacciones](https://zavalaautomatizacionycontrol.com.mx/marcas/allen-bradley.html)
+- [Keyence Sensores & Visión](https://zavalaautomatizacionycontrol.com.mx/marcas/keyence.html)
+- [Fanuc Robótica & CNC](https://zavalaautomatizacionycontrol.com.mx/marcas/fanuc.html)
+- [Mitsubishi Electric](https://zavalaautomatizacionycontrol.com.mx/marcas/mitsubishi.html)
+- [Control, Neumática & Sensores](https://zavalaautomatizacionycontrol.com.mx/marcas/control-y-sensores.html)

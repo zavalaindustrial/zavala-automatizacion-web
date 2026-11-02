@@ -473,9 +473,12 @@ def main():
     raw_products = fetch_odoo_products()
     clean_products = process_and_save_products(raw_products)
     generate_brand_pages(clean_products)
-    generate_sitemap()
-    generate_robots()
     generate_redirects()
+    try:
+        from geo_generator import main as geo_main
+        geo_main()
+    except Exception as e:
+        print(f"[WARN] Error en generador GEO: {e}")
     print("=" * 60)
     print("¡Sincronización y generación completada exitosamente!")
     print("=" * 60)
