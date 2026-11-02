@@ -1,0 +1,5 @@
+# Robots.txt para Zavala Automatización y Control S.A. de C.V.
+User-agent: *
+Allow: /
+
+Sitemap: https://zavalaautomatizacionycontrol.com.mx/sitemap.xml

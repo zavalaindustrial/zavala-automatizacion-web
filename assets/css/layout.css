@@ -1,0 +1,255 @@
+/* ==========================================================================
+   ZAVALA AUTOMATIZACIÓN Y CONTROL S.A. DE C.V.
+   layout.css - Header, Navegación, Footer y Responsive
+   ========================================================================== */
+
+/* Topbar */
+.topbar {
+  background-color: #090d16;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.825rem;
+  padding: 8px 0;
+  color: var(--text-muted);
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.divider { color: var(--border-dark); }
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+}
+.topbar-link:hover { color: var(--text-main); }
+
+.topbar-wa {
+  color: #86efac;
+  font-weight: 600;
+}
+.topbar-wa:hover { color: #4ade80; }
+
+/* Header & Navegación */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 14px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  padding: 6px 4px;
+  position: relative;
+}
+.nav-link:hover, .nav-link.active { color: var(--primary); }
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+/* Breadcrumbs */
+.breadcrumb-bar {
+  background: #090d16;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-dark);
+  font-size: 0.825rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+.breadcrumbs li::after {
+  content: '/';
+  margin-left: 8px;
+  color: var(--border-dark);
+}
+.breadcrumbs li:last-child::after { content: ''; }
+.breadcrumbs li.active { color: var(--accent); }
+
+/* Banner de Urgencia */
+.section-urgent-banner {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.urgent-banner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.urgent-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.urgent-text p {
+  color: #cbd5e1;
+  max-width: 650px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #080c14;
+  padding: 60px 0 20px;
+  color: var(--text-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.footer-about p {
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.company-legal {
+  font-size: 0.8rem !important;
+  color: #cbd5e1;
+}
+
+.footer-col h4 {
+  color: var(--text-main);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+.footer-links a:hover { color: var(--primary); }
+
+.footer-contact-item {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+.footer-contact-item a { color: #38bdf8; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 20px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.775rem;
+}
+
+.footer-disclaimer {
+  max-width: 600px;
+  font-size: 0.725rem;
+  color: #64748b;
+}
+
+/* Botón Flotante WhatsApp */
+.wa-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.wa-floating-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #fff;
+}
+.wa-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 768px) {
+  .topbar-content { flex-direction: column; align-items: flex-start; }
+  .site-header .main-nav { display: none; }
+  .wa-floating-btn .wa-text { display: none; }
+  .wa-floating-btn { padding: 14px; }
+}
