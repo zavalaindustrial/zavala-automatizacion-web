@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (matches.length > 0) {
       // CASO 1: SÍ HAY COINCIDENCIA EN EL CATÁLOGO (Stock Local / Catálogo)
       const matchedItem = matches[0];
-      customPartCard.className = "custom-part-card is-in-stock";
+      customPartCard.className = "custom-part-card";
 
-      const urgentMsg = `Hola Zavala Automatización, me interesa cotizar para entrega inmediata el No. de Parte en stock: ${matchedItem.part_number} (${matchedItem.description}). ¿Tienen disponibilidad y tiempo de entrega?`;
+      const urgentMsg = `Hola Zavala Automatización, me interesa cotizar para entrega inmediata el No. de Parte ${matchedItem.part_number} (${matchedItem.description}). ¿Tienen disponibilidad y tiempo de entrega?`;
       const waUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
 
       let suggestionsHtml = "";
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const others = matches.slice(1, 5);
         suggestionsHtml = `
           <div class="hero-matches-suggestions" style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
-            <span style="color: #94a3b8; margin-right: 6px;">Otras coincidencias en almacén:</span>
+            <span style="color: #94a3b8; margin-right: 6px;">Otras coincidencias en catálogo:</span>
             ${others.map(item => `
               <button type="button" class="search-suggestion-chip" data-part="${item.part_number}">
                 ${item.part_number}
@@ -121,18 +121,18 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="custom-part-card-content">
           <div class="custom-part-text">
             <div style="margin-bottom: 6px;">
-              <span class="badge-stock">✓ EN INVENTARIO LOCAL / CATÁLOGO</span>
+              <span class="badge-cat" style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3);">✓ REFERENCIA EN CATÁLOGO</span>
             </div>
             <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 4px;">
               No. de Parte: <strong class="part-number-code" style="color: #38bdf8;">${matchedItem.part_number}</strong> (${matchedItem.brand || 'Industrial'})
             </h4>
             <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 4px;">${matchedItem.description}</p>
             <p style="color: #4ade80; font-size: 0.9rem; margin-top: 4px; font-weight: 500;">
-              ✓ Pieza registrada en almacén. Suministro local y entrega inmediata disponible.
+              Suministro y cotización formal de componentes de automatización para plantas en todo México.
             </p>
           </div>
           <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
-            <span>💬</span> Cotizar Entrega Inmediata (Pieza en Stock)
+            <span>💬</span> Cotizar este No. de Parte por WhatsApp
           </a>
         </div>
         ${suggestionsHtml}
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else {
       // CASO 2: NO HAY COINCIDENCIA (Importación y Suministro Directo)
-      customPartCard.className = "custom-part-card is-custom";
+      customPartCard.className = "custom-part-card";
 
       const urgentMsg = `Hola Zavala Automatización, me urge cotizar el No. de Parte: ${query.toUpperCase()}. ¿Lo tienen en almacén o tiempo de entrega por importación exprés?`;
       const waUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
@@ -161,13 +161,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="custom-part-card-content">
           <div class="custom-part-text">
             <div style="margin-bottom: 6px;">
-              <span class="badge-cat" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">⚡ IMPORTACIÓN Y SUMINISTRO DIRECTO</span>
+              <span class="badge-cat" style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3);">🔍 BÚSQUEDA Y SUMINISTRO INDUSTRIAL</span>
             </div>
             <h4 style="font-size: 1.15rem; color: #fff; margin-bottom: 4px;">
-              ¿Buscas el No. de Parte <span class="part-number-code" style="color: #fbbf24;">${query.toUpperCase()}</span>?
+              ¿Buscas el No. de Parte <span class="part-number-code" style="color: #38bdf8;">${query.toUpperCase()}</span>?
             </h4>
             <p style="color: #cbd5e1; font-size: 0.95rem;">
-              No está en mostrador local, pero lo localizamos y suministramos por importación express en tiempo récord.
+              Localizamos y suministramos refacciones y componentes de automatización industrial para plantas en todo México.
             </p>
           </div>
           <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
