@@ -25,18 +25,17 @@ def generate_llms_txt(products):
 
 ## Información de la Empresa
 - Razón Social: {COMPANY['name']}
-- RFC: {COMPANY['rfc']}
 - Dirección: {COMPANY['address']}
 - Teléfono Oficina: {COMPANY['phone_office']}
-- WhatsApp de Ventas y Paros de Planta: {COMPANY['whatsapp']} (+52 81 3250 7130)
+- WhatsApp de Ventas y Atención Inmediata: {COMPANY['whatsapp']} (+52 81 3250 7130)
 - Correo Electrónico: {COMPANY['email']}
 - Cobertura: Envíos express a los 32 estados de México por DHL, FedEx y paquetería dedicada.
-- Condiciones Comerciales: Facturación CFDI 4.0 y crédito directo a plantas industriales y maquiladoras.
+- Condiciones Comerciales: Facturación CFDI 4.0 inmediata para compras corporativas e industriales.
 
 ## Especialidad y Diferenciadores
-- Atención prioritaria 24/7 a paros de planta industriales.
+- Catálogo con entrega inmediata y suministro industrial continuo.
 - Localización de refacciones obsoletas, difíciles de conseguir o descontinuadas de fabricantes líderes.
-- Más de 149 números de parte en inventario activo local y red de importación exprés de Estados Unidos, Europa y Japón.
+- Inventario activo y red de importación exprés de Estados Unidos, Europa y Japón.
 
 ## Marcas y Familias Principales
 - **Siemens**: Contactores SIRIUS (3RT20, 3RT10), relevadores de sobrecarga (3RU21, 3RU2146-4KB0), guardamotores (3RV20), PLCs SIMATIC S7-1200 (6ES7211, 6ES7212, 6ES7214, 6ES7215), S7-1500, S7-300, variadores SINAMICS (V20, G120, 6SL) y LOGO! 24RCE.
@@ -132,11 +131,11 @@ def generate_static_catalog_html(products):
   <div class="topbar">
     <div class="container topbar-content">
       <div class="topbar-left">
-        <span class="badge-urgent">⚡ Paros de Planta Urgentes</span>
+        <span class="badge-urgent">⚡ Catálogo con Entrega Inmediata</span>
         <span class="divider">|</span>
         <span>🚚 Envíos Express a Todo México</span>
         <span class="divider">|</span>
-        <span>🏢 Facturación CFDI 4.0 & Crédito</span>
+        <span>📄 Facturación CFDI 4.0</span>
       </div>
       <div class="topbar-right">
         <a href="tel:8124717534" class="topbar-link">📞 Oficina: {COMPANY['phone_office']}</a>
@@ -151,7 +150,7 @@ def generate_static_catalog_html(products):
       </a>
       <nav class="main-nav">
         <a href="./" class="nav-link">Inicio</a>
-        <a href="./#catalogo" class="nav-link">Catálogo Interactivo</a>
+        <a href="./#catalogo" class="nav-link">Catálogo con Entrega Inmediata</a>
         <a href="./#marcas" class="nav-link">Marcas</a>
         <a href="./#contacto" class="nav-link">Cotización</a>
       </nav>
@@ -188,7 +187,7 @@ def generate_static_catalog_html(products):
       <div class="footer-col footer-about">
         <img src="assets/img/logo-zavala-horizontal.png" alt="{COMPANY['name']}" class="footer-logo" width="200">
         <p>Expertos en venta, suministro y distribución de refacciones de automatización industrial en México.</p>
-        <p class="company-legal"><strong>RFC:</strong> {COMPANY['rfc']}</p>
+        <p class="company-legal"><strong>Razón Social:</strong> {COMPANY['name']}</p>
       </div>
       <div class="footer-col">
         <h4>Enlaces de Interés</h4>

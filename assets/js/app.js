@@ -5,7 +5,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const WHATSAPP_BASE = "https://wa.me/5218132507130";
-  let allProducts = [];
+  let allProducts = [];         // Catálogo completo (11,619 productos) para hero search
+  let catalogProducts = [];     // Catálogo Odoo verificado (143 productos) para tabla
   let filteredProducts = [];
   let currentPage = 1;
   const itemsPerPage = 12;
@@ -14,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroSearchInput = document.getElementById("hero-search-input");
   const btnHeroSearch = document.getElementById("btn-hero-search");
   const customPartCard = document.getElementById("custom-part-card");
-  const customPartQuery = document.getElementById("custom-part-query");
-  const customPartWaBtn = document.getElementById("custom-part-wa-btn");
   
   const catalogSearchInput = document.getElementById("catalog-search-input");
   const catalogTbody = document.getElementById("catalog-tbody");
@@ -30,32 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnRfqWa = document.getElementById("btn-rfq-wa");
   const btnRfqEmail = document.getElementById("btn-rfq-email");
 
-  // 1. Cargar datos de productos.json
-  fetch("data/productos.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Error cargando productos.json");
-      return res.json();
-    })
+  // 1. Cargar productos Odoo (143) para el catálogo en vivo con entrega inmediata
+  fetch("data/productos_odoo.json")
+    .then(res => res.ok ? res.json() : [])
     .then(data => {
-      allProducts = data;
-      filteredProducts = [...allProducts];
+      catalogProducts = data;
+      filteredProducts = [...catalogProducts];
       renderCatalog();
     })
     .catch(err => {
-      console.warn("Fallo fetch local, cargando respaldo embebido:", err);
-      // Respaldo de emergencia
-      allProducts = [
-        { id: 192, part_number: "1746-P2", description: "FUENTE DE ALIMENTACION 120/240 5A SLC 500", brand: "Allen-Bradley", category: "Fuentes de Alimentación" },
-        { id: 114, part_number: "55.34.9.024.0040", description: "FINDER RELEVADOR ENCAPSULADO 24VDC", brand: "Finder", category: "Relevación y Seguridad" },
-        { id: 191, part_number: "SMC SY3A0R-5U1-NA", description: "VALVULA SELENOIDE NEUMATICA 4/5", brand: "SMC", category: "Neumática y Válvulas" },
-        { id: 194, part_number: "OT100F3", description: "INTERRUPTOR DESCONECTOR DE 3 POLOS ABB", brand: "ABB", category: "Maniobra y Protección Eléctrica" },
-        { id: 178, part_number: "PRW12-4DP", description: "SENSOR DE PROXIMIDAD INDUCTIVO 12MM", brand: "Autonics", category: "Sensores e Instrumentación" }
-      ];
-      filteredProducts = [...allProducts];
-      renderCatalog();
+      console.warn("Fallo carga productos_odoo.json:", err);
     });
 
-  // 2. Buscador en Tiempo Real del Hero (Detección Inmediata de Stock y Sugerencias)
+  // 2. Cargar catálogo completo (11,619) para el buscador global en tiempo real
+  fetch("data/productos.json")
+    .then(res => res.ok ? res.json() : [])
+    .then(data => {
+      allProducts = data;
+      if (!catalogProducts || catalogProducts.length === 0) {
+        catalogProducts = data.slice(0, 143);
+        filteredProducts = [...catalogProducts];
+        renderCatalog();
+      }
+    })
+    .catch(err => {
+      console.warn("Fallo carga productos.json:", err);
+    });
+
+  // 3. Buscador en Tiempo Real del Hero (Búsqueda sobre los 11,619 productos)
   function handleHeroSearch() {
     const query = (heroSearchInput ? heroSearchInput.value : "").trim();
     if (!query) {
@@ -63,9 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         customPartCard.style.display = "none";
         customPartCard.innerHTML = "";
       }
-      filteredProducts = [...allProducts];
-      currentPage = 1;
-      renderCatalog();
       return;
     }
 
@@ -73,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const qLower = query.toLowerCase();
 
-    // 1. Buscar coincidencias en el inventario/catálogo
+    // Buscar coincidencias en todo el inventario
     const matches = allProducts.filter(p => {
       const pn = (p.part_number || p.code || "").toLowerCase();
       const desc = (p.description || "").toLowerCase();
@@ -81,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return pn.includes(qLower) || desc.includes(qLower) || br.includes(qLower);
     });
 
-    // Ordenar coincidencias: prioridad a coincidencia exacta o inicio en part_number
     matches.sort((a, b) => {
       const aPn = (a.part_number || a.code || "").toLowerCase();
       const bPn = (b.part_number || b.code || "").toLowerCase();
@@ -95,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     customPartCard.style.display = "block";
 
     if (matches.length > 0) {
-      // CASO 1: SÍ HAY COINCIDENCIA EN EL CATÁLOGO (Stock Local / Catálogo)
       const matchedItem = matches[0];
       customPartCard.className = "custom-part-card";
 
@@ -131,14 +127,18 @@ document.addEventListener("DOMContentLoaded", () => {
               Suministro y cotización formal de componentes de automatización para plantas en todo México.
             </p>
           </div>
-          <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
-            <span>💬</span> Cotizar este No. de Parte por WhatsApp
-          </a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="${waUrl}" target="_blank" class="btn btn-wa-large" style="flex: 1; min-width: 200px; justify-content: center;">
+              <span>💬</span> Cotizar por WhatsApp
+            </a>
+            <a href="producto.html?p=${encodeURIComponent(matchedItem.part_number)}" class="btn btn-outline-cyan" style="flex: 1; min-width: 200px; justify-content: center;">
+              🔍 Ver Ficha Técnica y Detalles
+            </a>
+          </div>
         </div>
         ${suggestionsHtml}
       `;
 
-      // Event listeners para chips de sugerencias
       customPartCard.querySelectorAll(".search-suggestion-chip").forEach(chip => {
         chip.addEventListener("click", (e) => {
           e.preventDefault();
@@ -151,9 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     } else {
-      // CASO 2: NO HAY COINCIDENCIA (Importación y Suministro Directo)
       customPartCard.className = "custom-part-card";
-
       const urgentMsg = `Hola Zavala Automatización, me urge cotizar el No. de Parte: ${query.toUpperCase()}. ¿Lo tienen en almacén o tiempo de entrega por importación exprés?`;
       const waUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(urgentMsg)}`;
 
@@ -170,16 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
               Localizamos y suministramos refacciones y componentes de automatización industrial para plantas en todo México.
             </p>
           </div>
-          <a href="${waUrl}" target="_blank" class="btn btn-wa-large">
-            <span>💬</span> Cotizar este No. de Parte por WhatsApp
-          </a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="${waUrl}" target="_blank" class="btn btn-wa-large" style="flex: 1; min-width: 200px; justify-content: center;">
+              <span>💬</span> Cotizar por WhatsApp
+            </a>
+            <a href="producto.html?p=${encodeURIComponent(query)}" class="btn btn-outline-cyan" style="flex: 1; min-width: 200px; justify-content: center;">
+              🔍 Consultar Ficha Técnica
+            </a>
+          </div>
         </div>
       `;
     }
-
-    filteredProducts = matches;
-    currentPage = 1;
-    renderCatalog();
   }
 
   if (heroSearchInput) {
@@ -198,7 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Clicks en ejemplos del Hero
   document.querySelectorAll(".helper-example").forEach(chip => {
     chip.addEventListener("click", () => {
       const val = chip.getAttribute("data-val") || chip.textContent.trim();
@@ -209,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. Filtros por Categoría en Catálogo
+  // 4. Filtros por Categoría en Catálogo de Entrega Inmediata
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       filterButtons.forEach(b => b.classList.remove("active"));
@@ -231,7 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function applyCatalogFilters(category, searchQuery) {
-    filteredProducts = allProducts.filter(p => {
+    const baseSource = (catalogProducts && catalogProducts.length > 0) ? catalogProducts : allProducts;
+    filteredProducts = baseSource.filter(p => {
       const matchCat = (category === "todos" || !category) ? true : (p.category === category || p.brand === category);
       const matchSearch = !searchQuery ? true : (
         (p.part_number && p.part_number.toLowerCase().includes(searchQuery)) ||
@@ -245,12 +244,12 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCatalog();
   }
 
-  // 4. Renderizado y Paginación del Catálogo
+  // 5. Renderizado y Paginación del Catálogo
   function renderCatalog() {
     if (!catalogTbody) return;
 
     if (catalogCount) {
-      catalogCount.textContent = `Mostrando ${filteredProducts.length} productos`;
+      catalogCount.textContent = `Mostrando ${filteredProducts.length} productos con entrega inmediata`;
     }
 
     if (filteredProducts.length === 0) {
@@ -258,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <tr>
           <td colspan="5" class="text-center py-4">
             <p style="margin-bottom: 12px; color: #cbd5e1;">No se encontró ningún registro exacto en el listado base para esta búsqueda.</p>
-            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 16px;">Suministramos más de 50,000 números de parte por importación directa o convenio con fabricantes.</p>
+            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 16px;">Suministramos más de 50,000 números de parte por importación directa o catálogo extendido.</p>
             <a href="${WHATSAPP_BASE}?text=Hola%20Zavala%2C%20busco%20un%20n%C3%BAmero%20de%20parte%20especial%20que%20no%20veo%20en%20el%20listado" target="_blank" class="btn btn-accent btn-sm">
               💬 Consultar No. de Parte con Asesor por WhatsApp
             </a>
@@ -284,14 +283,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const waUrl = item.whatsapp_url || `${WHATSAPP_BASE}?text=${encodeURIComponent(`Hola Zavala, requiero cotización del No. de Parte: ${item.part_number}`)}`;
       rowsHtml += `
         <tr>
-          <td><strong class="part-number-code">${escapeHtml(item.part_number)}</strong></td>
+          <td><a href="producto.html?p=${encodeURIComponent(item.part_number)}" style="color:#38bdf8;text-decoration:none;"><strong class="part-number-code">${escapeHtml(item.part_number)}</strong></a></td>
           <td>${escapeHtml(item.description)}</td>
           <td><span class="badge-cat">${escapeHtml(item.brand || item.category)}</span></td>
-          <td><span class="badge-stock">✓ Suministro Express</span></td>
+          <td><span class="badge-stock">⚡ Entrega Inmediata</span></td>
           <td>
-            <a href="${waUrl}" target="_blank" class="btn btn-table-wa">
-              Cotizar WhatsApp
-            </a>
+            <div style="display:flex;gap:6px;align-items:center;">
+              <a href="producto.html?p=${encodeURIComponent(item.part_number)}" class="btn btn-sm btn-outline-cyan" title="Ver Ficha Técnica y Especificaciones">🔍 Ficha</a>
+              <a href="${waUrl}" target="_blank" class="btn btn-table-wa">Cotizar WhatsApp</a>
+            </div>
           </td>
         </tr>
       `;
@@ -325,14 +325,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Envío de Formulario RFQ
+  // 6. Envío de Formulario RFQ
   function getRfqData() {
     const empresa = document.getElementById("rfq-empresa")?.value.trim() || "No especificada";
     const contacto = document.getElementById("rfq-contacto")?.value.trim() || "No especificado";
     const telefono = document.getElementById("rfq-telefono")?.value.trim() || "No especificado";
     const email = document.getElementById("rfq-email")?.value.trim() || "No especificado";
     const partes = document.getElementById("rfq-partes")?.value.trim() || "";
-    const urgente = document.getElementById("rfq-urgente")?.checked ? "SÍ - PARO DE PLANTA URGENTE" : "Cotización normal de suministro";
+    const urgente = document.getElementById("rfq-urgente")?.checked ? "SÍ - REQUERIMIENTO URGENTE / ENTREGA INMEDIATA" : "Cotización normal de suministro";
 
     return { empresa, contacto, telefono, email, partes, urgente };
   }
@@ -347,13 +347,23 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      let msg = `*SOLICITUD DE COTIZACIÓN ZAVALA*\n`;
-      msg += `🚨 *Prioridad:* ${d.urgente}\n`;
-      msg += `🏢 *Empresa:* ${d.empresa}\n`;
-      msg += `👤 *Contacto:* ${d.contacto}\n`;
-      msg += `📞 *Tel/WA:* ${d.telefono}\n`;
-      msg += `✉️ *Correo:* ${d.email}\n\n`;
-      msg += `📋 *Números de Parte Requeridos:*\n${d.partes}\n\n`;
+      let msg = `*SOLICITUD DE COTIZACIÓN ZAVALA*
+`;
+      msg += `⚡ *Prioridad:* ${d.urgente}
+`;
+      msg += `🏢 *Empresa:* ${d.empresa}
+`;
+      msg += `👤 *Contacto:* ${d.contacto}
+`;
+      msg += `📞 *Tel/WA:* ${d.telefono}
+`;
+      msg += `✉️ *Correo:* ${d.email}
+
+`;
+      msg += `📋 *Números de Parte Requeridos:*
+${d.partes}
+
+`;
       msg += `Por favor confirmar disponibilidad y cotización.`;
 
       window.open(`${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`, "_blank");
@@ -374,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btnRfqEmail.innerHTML = "⏳ Enviando correo directo...";
       btnRfqEmail.disabled = true;
 
-      const subject = `[Cotización Web] ${d.empresa || 'Empresa'} - ${d.urgente ? 'URGENTE PARO' : 'Solicitud de Partes'}`;
+      const subject = `[Cotización Web] ${d.empresa || 'Empresa'} - ${d.urgente.includes('URGENTE') ? 'URGENTE ENTREGA INMEDIATA' : 'Solicitud de Partes'}`;
       
       try {
         const response = await fetch("https://formsubmit.co/ajax/ventas1@zavalaindustrial.net", {
@@ -390,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
             contacto: d.contacto || "No especificado",
             telefono_o_whatsapp: d.telefono || "No especificado",
             correo_cliente: d.email || "No especificado",
-            prioridad_urgente: d.urgente ? "SÍ - REQUERIMIENTO URGENTE" : "Normal",
+            prioridad_urgente: d.urgente,
             lista_de_refacciones: d.partes
           })
         });
@@ -418,7 +428,16 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRfqEmail.innerHTML = originalBtnText;
         btnRfqEmail.disabled = false;
         
-        let body = `Estimado equipo de Ventas:\n\nEmpresa: ${d.empresa}\nContacto: ${d.contacto}\nTeléfono: ${d.telefono}\nCorreo: ${d.email}\nUrgente: ${d.urgente}\n\nPartes:\n${d.partes}`;
+        let body = `Estimado equipo de Ventas:
+
+Empresa: ${d.empresa}
+Contacto: ${d.contacto}
+Teléfono: ${d.telefono}
+Correo: ${d.email}
+Urgente: ${d.urgente}
+
+Partes:
+${d.partes}`;
         window.location.href = `mailto:ventas1@zavalaindustrial.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       }
     });

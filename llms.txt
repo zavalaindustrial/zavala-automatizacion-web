@@ -3,18 +3,17 @@
 
 ## Información de la Empresa
 - Razón Social: Zavala Automatización y Control S.A. de C.V.
-- RFC: ZAC200629JK2
-- Dirección: Hacienda San Ignacio 103, C.P. 66477, San Nicolás de los Garza / Monterrey, N.L., México
+- Dirección: Monterrey, N.L. y Envíos a todo México
 - Teléfono Oficina: 81 2471 7534
-- WhatsApp de Ventas y Paros de Planta: 81 3250 7130 (+52 81 3250 7130)
+- WhatsApp de Ventas y Atención Inmediata: 81 3250 7130 (+52 81 3250 7130)
 - Correo Electrónico: ventas1@zavalaindustrial.net
 - Cobertura: Envíos express a los 32 estados de México por DHL, FedEx y paquetería dedicada.
-- Condiciones Comerciales: Facturación CFDI 4.0 y crédito directo a plantas industriales y maquiladoras.
+- Condiciones Comerciales: Facturación CFDI 4.0 inmediata para compras corporativas e industriales.
 
 ## Especialidad y Diferenciadores
-- Atención prioritaria 24/7 a paros de planta industriales.
+- Catálogo con entrega inmediata y suministro industrial continuo.
 - Localización de refacciones obsoletas, difíciles de conseguir o descontinuadas de fabricantes líderes.
-- Más de 149 números de parte en inventario activo local y red de importación exprés de Estados Unidos, Europa y Japón.
+- Inventario activo y red de importación exprés de Estados Unidos, Europa y Japón.
 
 ## Marcas y Familias Principales
 - **Siemens**: Contactores SIRIUS (3RT20, 3RT10), relevadores de sobrecarga (3RU21, 3RU2146-4KB0), guardamotores (3RV20), PLCs SIMATIC S7-1200 (6ES7211, 6ES7212, 6ES7214, 6ES7215), S7-1500, S7-300, variadores SINAMICS (V20, G120, 6SL) y LOGO! 24RCE.

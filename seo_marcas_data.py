@@ -6,13 +6,12 @@ Zavala Automatización y Control S.A. de C.V.
 COMPANY = {
     "name": "Zavala Automatización y Control S.A. de C.V.",
     "short_name": "Zavala Automatización y Control",
-    "rfc": "ZAC200629JK2",
     "phone_office": "81 2471 7534",
     "whatsapp": "81 3250 7130",
     "whatsapp_url": "https://wa.me/5218132507130",
     "email": "ventas1@zavalaindustrial.net",
-    "address": "Hacienda San Ignacio 103, C.P. 66477, San Nicolás de los Garza / Monterrey, N.L., México",
-    "city": "San Nicolás de los Garza / Monterrey",
+    "address": "Monterrey, N.L. y Envíos a todo México",
+    "city": "Monterrey",
     "state": "Nuevo León",
     "country": "México",
     "domain": "https://zavalaautomatizacionycontrol.com.mx"
@@ -23,10 +22,10 @@ MARCAS_SEO_CONFIG = {
         "slug": "siemens.html",
         "title": "Siemens Automatización y Control Industrial México | Suministro y Refacciones Urgentes Zavala",
         "h1": "Suministro y Refacciones Siemens en México: SIRIUS, SIMATIC, SINAMICS y LOGO!",
-        "meta_desc": "Distribución y suministro express de refacciones industriales Siemens en México. Contactores 3RT, relevadores 3RU, 3RU2146-4KB0, PLCs S7-1200, S7-1500, variadores SINAMICS y módulos 6ES7. Envíos urgentes para paros de planta.",
+        "meta_desc": "Distribución y suministro express de refacciones industriales Siemens en México. Contactores 3RT, relevadores 3RU, 3RU2146-4KB0, PLCs S7-1200, S7-1500, variadores SINAMICS y módulos 6ES7. Catálogo con entrega inmediata y envíos express a todo México.",
         "brand_name": "Siemens",
         "brand_logo": "../assets/img/marca-siemens.png",
-        "hero_desc": "Suministramos toda la gama industrial Siemens: desde contactores y relevadores térmicos SIRIUS (3RT, 3RU, 3RV) hasta controladores SIMATIC S7-1200 / S7-1500, variadores SINAMICS y micro-autómatas LOGO!. Atención inmediata para emergencias en Monterrey y envíos a todo México con opción de crédito para plantas industriales.",
+        "hero_desc": "Suministramos toda la gama industrial Siemens: desde contactores y relevadores térmicos SIRIUS (3RT, 3RU, 3RV) hasta controladores SIMATIC S7-1200 / S7-1500, variadores SINAMICS y micro-autómatas LOGO!. Catálogo con entrega inmediata en Monterrey y envíos express a todo México con suministro industrial inmediato.",
         "families": [
             {
                 "name": "Maniobra y Protección SIRIUS",
@@ -54,7 +53,7 @@ MARCAS_SEO_CONFIG = {
         "slug": "allen-bradley.html",
         "title": "Allen-Bradley Rockwell Automation México | Refacciones, ControlLogix, CompactLogix, PowerFlex",
         "h1": "Refacciones y Equipo Allen-Bradley / Rockwell Automation en México",
-        "meta_desc": "Suministro de equipo y refacciones Allen-Bradley en México. Fuentes 1746-P2, ControlLogix 1756, CompactLogix 1769, POINT I/O 1734, variadores PowerFlex 525 y PanelView Plus. Entregas express para paros de planta.",
+        "meta_desc": "Suministro de equipo y refacciones Allen-Bradley en México. Fuentes 1746-P2, ControlLogix 1756, CompactLogix 1769, POINT I/O 1734, variadores PowerFlex 525 y PanelView Plus. Catálogo con entrega inmediata y envíos express a todo México.",
         "brand_name": "Allen-Bradley",
         "brand_logo": "../assets/img/marca-allen-bradley.png",
         "hero_desc": "Especialistas en suministro de refacciones críticas y sistemas completos de Rockwell Automation / Allen-Bradley en México. Contamos con stock de fuentes SLC 500 (1746-P2), módulos ControlLogix 1756, CompactLogix 1769, MicroLogix, variadores PowerFlex 525 y pantallas táctiles PanelView Plus. Solución inmediata ante fallas de maquinaria y piezas descontinuadas.",
@@ -116,10 +115,10 @@ MARCAS_SEO_CONFIG = {
         "slug": "fanuc.html",
         "title": "Refacciones Fanuc Robótica y CNC México | Servomotores, Teach Pendants, Drives",
         "h1": "Refacciones de Robótica Industrial y Control Numérico Fanuc en México",
-        "meta_desc": "Suministro urgente de refacciones Fanuc en México: servomotores A06B, teach pendants A05B, controladores R-30iA, R-30iB, fuentes A16B y tarjetas A03B. Atención a paros de línea y refacciones descontinuadas.",
+        "meta_desc": "Suministro de refacciones Fanuc en México: servomotores A06B, teach pendants A05B, controladores R-30iA, R-30iB, fuentes A16B y tarjetas A03B. Catálogo con entrega inmediata y refacciones descontinuadas con envío a todo México.",
         "brand_name": "Fanuc",
         "brand_logo": "../assets/img/marca-fanuc.png",
-        "hero_desc": "Apoyamos a las plantas de manufactura en México a mantener sus celdas robóticas Fanuc en operación continua. Suministramos refacciones mecánicas y electrónicas originales: servomotores Alpha i, tarjetas de control de ejes, teach pendants para controladores R-30iA y R-30iB, y fuentes conmutadas ante cualquier paro imprevisto.",
+        "hero_desc": "Apoyamos a las plantas de manufactura en México a mantener sus celdas robóticas Fanuc en operación continua. Suministramos refacciones mecánicas y electrónicas originales: servomotores Alpha i, tarjetas de control de ejes, teach pendants para controladores R-30iA y R-30iB, y fuentes conmutadas para mantener la continuidad operativa de tus procesos.",
         "families": [
             {
                 "name": "Servomotores y Servodrives Alpha i",
@@ -181,7 +180,7 @@ MARCAS_SEO_CONFIG = {
         "meta_desc": "Suministro multimarca de componentes industriales: SMC neumática, Finder relevadores, Autonics, Banner, Carlo Gavazzi, ABB interruptores, Celduc estado sólido y sensores de proximidad. Cotizaciones urgentes.",
         "brand_name": "Control y Sensores",
         "brand_logo": "../assets/img/equipo-sensores-proximidad.png",
-        "hero_desc": "Centralizamos las necesidades de refaccionamiento eléctrico, neumático y de sensórica para plantas de manufactura en México. Trabajamos con fabricantes de clase mundial como SMC, ABB, Finder, Celduc, Autonics, Honeywell, Carlo Gavazzi, Banner y más. Entregas consolidadas y crédito directo para empresas.",
+        "hero_desc": "Centralizamos las necesidades de refaccionamiento eléctrico, neumático y de sensórica para plantas de manufactura en México. Trabajamos con fabricantes de clase mundial como SMC, ABB, Finder, Celduc, Autonics, Honeywell, Carlo Gavazzi, Banner y más. Catálogo con entrega inmediata, entregas consolidadas y facturación fiscal CFDI 4.0.",
         "families": [
             {
                 "name": "Neumática y Válvulas Industriales (SMC y Festo)",

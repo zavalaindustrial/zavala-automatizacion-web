@@ -163,7 +163,7 @@ def process_and_save_products(raw_products):
             "whatsapp_url": wa_link
         })
 
-    out_file = DATA_DIR / "productos.json"
+    out_file = DATA_DIR / "productos_odoo.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(clean_list, f, ensure_ascii=False, indent=2)
 
@@ -207,18 +207,18 @@ def generate_brand_pages(products):
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script type="application/ld+json">
-  {{"@context":"https://schema.org","@graph":[{{"@type":"LocalBusiness","name":"{COMPANY['name']}","telephone":"{COMPANY['phone_office']}","url":"{COMPANY['domain']}","logo":"{COMPANY['domain']}/assets/img/logo-zavala-horizontal.png","address":{{"@type":"PostalAddress","streetAddress":"Hacienda San Ignacio 103","addressLocality":"San Nicolás de los Garza / Monterrey","addressRegion":"Nuevo León","postalCode":"66477","addressCountry":"MX"}}}},{{"@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Inicio","item":"{COMPANY['domain']}/"}},{{"@type":"ListItem","position":2,"name":"Marcas","item":"{COMPANY['domain']}/#marcas"}},{{"@type":"ListItem","position":3,"name":"{cfg['brand_name']}","item":"{COMPANY['domain']}/marcas/{cfg['slug']}"}}]}}]}}
+  {{"@context":"https://schema.org","@graph":[{{"@type":"LocalBusiness","name":"{COMPANY['name']}","telephone":"{COMPANY['phone_office']}","url":"{COMPANY['domain']}","logo":"{COMPANY['domain']}/assets/img/logo-zavala-horizontal.png","address":{{"@type":"PostalAddress","addressLocality":"Monterrey","addressRegion":"Nuevo León","addressCountry":"MX"}}}},{{"@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Inicio","item":"{COMPANY['domain']}/"}},{{"@type":"ListItem","position":2,"name":"Marcas","item":"{COMPANY['domain']}/#marcas"}},{{"@type":"ListItem","position":3,"name":"{cfg['brand_name']}","item":"{COMPANY['domain']}/marcas/{cfg['slug']}"}}]}}]}}
   </script>
 </head>
 <body class="page-brand">
   <div class="topbar">
     <div class="container topbar-content">
       <div class="topbar-left">
-        <span class="badge-urgent">⚡ Paros de Planta Urgentes</span>
+        <span class="badge-urgent">⚡ Catálogo con Entrega Inmediata</span>
         <span class="divider">|</span>
         <span>🚚 Envíos Express a Todo México</span>
         <span class="divider">|</span>
-        <span>🏢 Facturación CFDI 4.0 & Crédito</span>
+        <span>📄 Facturación CFDI 4.0</span>
       </div>
       <div class="topbar-right">
         <a href="tel:8124717534" class="topbar-link">📞 Oficina: {COMPANY['phone_office']}</a>
@@ -232,7 +232,7 @@ def generate_brand_pages(products):
         <img src="../assets/img/logo-zavala-horizontal.png" alt="{COMPANY['name']}" class="brand-logo" width="220">
       </a>
       <nav class="main-nav">
-        <a href="../#catalogo" class="nav-link">Catálogo en Vivo</a>
+        <a href="../#catalogo" class="nav-link">Catálogo con Entrega Inmediata</a>
         <a href="../#marcas" class="nav-link active">Marcas</a>
         <a href="../#equipos" class="nav-link">Equipos</a>
         <a href="../#nosotros" class="nav-link">Nosotros</a>
@@ -259,7 +259,7 @@ def generate_brand_pages(products):
         <h1>{cfg['h1']}</h1>
         <p class="lead-text">{cfg['hero_desc']}</p>
         <div class="hero-brand-cta">
-          <a href="{COMPANY['whatsapp_url']}?text=Hola%20Zavala%2C%20tengo%20un%20paro%20de%20planta%20y%20necesito%20cotizar%20piezas%20de%20{urllib.parse.quote(cfg['brand_name'])}" target="_blank" class="btn btn-wa-large">💬 Cotizar {cfg['brand_name']} por WhatsApp</a>
+          <a href="{COMPANY['whatsapp_url']}?text=Hola%20Zavala%2C%20requiero%20cotizar%20piezas%20de%20{urllib.parse.quote(cfg['brand_name'])}" target="_blank" class="btn btn-wa-large">💬 Cotizar {cfg['brand_name']} por WhatsApp</a>
           <a href="#buscador-marca" class="btn btn-secondary">Explorar Familias</a>
         </div>
         <div class="trust-pills">
@@ -339,7 +339,12 @@ def generate_brand_pages(products):
               <td>{bp['description']}</td>
               <td><span class="badge-cat">{bp['category']}</span></td>
               <td><span class="badge-stock">✓ Disponible</span></td>
-              <td><a href="{bp['whatsapp_url']}" target="_blank" class="btn btn-table-wa">Cotizar WhatsApp</a></td>
+              <td>
+                <div style="display:flex;gap:4px;align-items:center;">
+                  <a href="../producto.html?p={urllib.parse.quote(bp['part_number'])}" class="btn btn-sm btn-outline-info">🔍 Ficha</a>
+                  <a href="{bp['whatsapp_url']}" target="_blank" class="btn btn-table-wa">Cotizar WhatsApp</a>
+                </div>
+              </td>
             </tr>"""
         else:
             html += f"""
@@ -359,11 +364,11 @@ def generate_brand_pages(products):
   <section class="section-urgent-banner">
     <div class="container urgent-banner-box">
       <div class="urgent-text">
-        <h2>¿Tienes tu máquina detenida por una pieza {cfg['brand_name']}?</h2>
-        <p>No pierdas miles de dólares por hora de paro. Localizamos números de parte difíciles y gestionamos envíos de emergencia.</p>
+        <h2>¿Requieres suministro inmediato de refacciones {cfg['brand_name']}?</h2>
+        <p>Contamos con catálogo con entrega inmediata, localización de piezas críticas y envíos express el mismo día a todo México.</p>
       </div>
       <div class="urgent-actions">
-        <a href="{COMPANY['whatsapp_url']}?text=EMERGENCIA%3A%20Paro%20de%20planta%20por%20refacci%C3%B3n%20{urllib.parse.quote(cfg['brand_name'])}" target="_blank" class="btn btn-danger-pulse">🚨 Atención a Paro de Planta</a>
+        <a href="{COMPANY['whatsapp_url']}?text=URGENTE%3A%20Cotizaci%C3%B3n%20inmediata%20de%20refacci%C3%B3n%20{urllib.parse.quote(cfg['brand_name'])}" target="_blank" class="btn btn-primary">⚡ Suministro y Cotización Inmediata</a>
       </div>
     </div>
   </section>
@@ -372,7 +377,7 @@ def generate_brand_pages(products):
       <div class="footer-col footer-about">
         <img src="../assets/img/logo-zavala-horizontal.png" alt="{COMPANY['name']}" class="footer-logo" width="200">
         <p>Expertos en suministro, distribución y reemplazo de refacciones y equipos de automatización industrial.</p>
-        <p class="company-legal"><strong>Razón Social:</strong> {COMPANY['name']}<br><strong>RFC:</strong> {COMPANY['rfc']}</p>
+        <p class="company-legal"><strong>Razón Social:</strong> {COMPANY['name']}</p>
       </div>
       <div class="footer-col">
         <h4>Marcas Líderes</h4>
