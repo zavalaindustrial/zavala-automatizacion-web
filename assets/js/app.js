@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (btnRfqEmail) {
-    btnRfqEmail.addEventListener("click", (e) => {
+    btnRfqEmail.addEventListener("click", async (e) => {
       e.preventDefault();
       const d = getRfqData();
       if (!d.partes) {
@@ -370,18 +370,57 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const subject = `[Cotización Express] ${d.empresa} - ${d.urgente ? 'URGENTE PARO' : 'Solicitud de Partes'}`;
-      let body = `Estimado equipo de Ventas Zavala Automatización y Control:\n\n`;
-      body += `Solicito cotización urgente para el siguiente requerimiento:\n\n`;
-      body += `Empresa: ${d.empresa}\n`;
-      body += `Contacto: ${d.contacto}\n`;
-      body += `Teléfono: ${d.telefono}\n`;
-      body += `Correo: ${d.email}\n`;
-      body += `Prioridad: ${d.urgente}\n\n`;
-      body += `Números de Parte / Detalle:\n${d.partes}\n\n`;
-      body += `Quedo a la espera de su respuesta formal con tiempos de entrega y condiciones.\n`;
+      const originalBtnText = btnRfqEmail.innerHTML;
+      btnRfqEmail.innerHTML = "⏳ Enviando correo directo...";
+      btnRfqEmail.disabled = true;
 
-      window.location.href = `mailto:ventas1@zavalaindustrial.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const subject = `[Cotización Web] ${d.empresa || 'Empresa'} - ${d.urgente ? 'URGENTE PARO' : 'Solicitud de Partes'}`;
+      
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/ventas1@zavalaindustrial.net", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            _subject: subject,
+            _template: "table",
+            empresa: d.empresa || "No especificada",
+            contacto: d.contacto || "No especificado",
+            telefono_o_whatsapp: d.telefono || "No especificado",
+            correo_cliente: d.email || "No especificado",
+            prioridad_urgente: d.urgente ? "SÍ - REQUERIMIENTO URGENTE" : "Normal",
+            lista_de_refacciones: d.partes
+          })
+        });
+
+        if (response.ok) {
+          btnRfqEmail.innerHTML = "✓ ¡Cotización Enviada!";
+          btnRfqEmail.style.background = "#10b981";
+          btnRfqEmail.style.color = "#fff";
+          
+          let alertEl = document.getElementById("rfq-success-alert");
+          if (!alertEl) {
+            alertEl = document.createElement("div");
+            alertEl.id = "rfq-success-alert";
+            alertEl.style.cssText = "margin-top: 15px; padding: 12px 16px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 6px; color: #4ade80; font-size: 0.95rem; text-align: center;";
+            rfqForm.appendChild(alertEl);
+          }
+          alertEl.innerHTML = "<strong>✓ ¡Mensaje enviado con éxito a ventas1@zavalaindustrial.net!</strong><br>Nuestro equipo te responderá a la brevedad con la cotización formal.";
+          
+          if (rfqForm) rfqForm.reset();
+        } else {
+          throw new Error("HTTP error " + response.status);
+        }
+      } catch (err) {
+        console.warn("Fallo envio API, usando cliente local mailto:", err);
+        btnRfqEmail.innerHTML = originalBtnText;
+        btnRfqEmail.disabled = false;
+        
+        let body = `Estimado equipo de Ventas:\n\nEmpresa: ${d.empresa}\nContacto: ${d.contacto}\nTeléfono: ${d.telefono}\nCorreo: ${d.email}\nUrgente: ${d.urgente}\n\nPartes:\n${d.partes}`;
+        window.location.href = `mailto:ventas1@zavalaindustrial.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
     });
   }
 
